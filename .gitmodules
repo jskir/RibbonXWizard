@@ -1,3 +1,6 @@
 [submodule "office-ribbonx-editor"]
 	path = office-ribbonx-editor
 	url = https://github.com/fernandreu/office-ribbonx-editor
+[submodule "office-ribbon"]
+	path = office-ribbon
+	url = https://github.com/fernandreu/office-ribbonx-editor
