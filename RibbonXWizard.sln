@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36811.4 d17.14
+VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RibbonXWizard", "RibbonXWizard.csproj", "{70885AC0-DD13-415D-AD8E-A53BAF5EBC9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeRibbonXEditor.Common", "office-ribbonx-editor\src\OfficeRibbonXEditor.Common\OfficeRibbonXEditor.Common.csproj", "{74D5AC9A-5B5B-70F1-8040-1FBDE9E8C245}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeRibbonXEditor.Common", "OfficeRibbonXEditor.Common\OfficeRibbonXEditor.Common.csproj", "{D0DE758F-8E54-30AC-9948-9217BF5B74D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{70885AC0-DD13-415D-AD8E-A53BAF5EBC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70885AC0-DD13-415D-AD8E-A53BAF5EBC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70885AC0-DD13-415D-AD8E-A53BAF5EBC9E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{74D5AC9A-5B5B-70F1-8040-1FBDE9E8C245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74D5AC9A-5B5B-70F1-8040-1FBDE9E8C245}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74D5AC9A-5B5B-70F1-8040-1FBDE9E8C245}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74D5AC9A-5B5B-70F1-8040-1FBDE9E8C245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0DE758F-8E54-30AC-9948-9217BF5B74D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0DE758F-8E54-30AC-9948-9217BF5B74D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0DE758F-8E54-30AC-9948-9217BF5B74D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0DE758F-8E54-30AC-9948-9217BF5B74D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
