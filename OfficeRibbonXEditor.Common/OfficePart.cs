@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using System.IO.Packaging;
 using System.Xml;
-using CommunityToolkit.Diagnostics;
 
 namespace OfficeRibbonXEditor.Common;
 
@@ -80,7 +79,10 @@ public class OfficePart
 
     public string? AddImage(string filePath, string? imageId = null, Func<string?, string?, bool>? alreadyExistingAction = null)
     {
-        Guard.IsNotNullOrEmpty(filePath);
+        if (string.IsNullOrEmpty(filePath))
+        {
+            throw new ArgumentException("Value cannot be null or empty.", nameof(filePath));
+        }
             
         if (PartType != XmlPart.RibbonX12 && PartType != XmlPart.RibbonX14)
         {
@@ -90,14 +92,20 @@ public class OfficePart
         var fileName = Path.GetFileNameWithoutExtension(filePath);
             
         imageId ??= XmlConvert.EncodeName(fileName);
-        Guard.IsNotNullOrEmpty(imageId);
+        if (string.IsNullOrEmpty(imageId))
+        {
+            throw new ArgumentException("Value cannot be null or empty.", nameof(imageId));
+        }
             
         return AddImageHelper(filePath, imageId, alreadyExistingAction);
     }
         
     public void RemoveImage(string imageId)
     {
-        Guard.IsNotNullOrEmpty(imageId);
+        if (string.IsNullOrEmpty(imageId))
+        {
+            throw new ArgumentException("Value cannot be null or empty.", nameof(imageId));
+        }
             
         if (Part == null)
         {
@@ -145,8 +153,15 @@ public class OfficePart
 
     public void ChangeImageId(string source, string target)
     {
-        Guard.IsNotNull(source);
-        Guard.IsNotNullOrEmpty(target);
+        if (source == null)
+        {
+            throw new ArgumentNullException(nameof(source));
+        }
+
+        if (string.IsNullOrEmpty(target))
+        {
+            throw new ArgumentException("Value cannot be null or empty.", nameof(target));
+        }
             
         if (Part == null)
         {
@@ -204,7 +219,10 @@ public class OfficePart
 
     private static string MapImageContentType(string extension)
     {
-        Guard.IsNotNullOrEmpty(extension);
+        if (string.IsNullOrEmpty(extension))
+        {
+            throw new ArgumentException("Value cannot be null or empty.", nameof(extension));
+        }
 
         var extLowerCase = extension.ToUpperInvariant();
 
@@ -219,7 +237,10 @@ public class OfficePart
 
     private string? AddImageHelper(string fileName, string imageId, Func<string?, string?, bool>? alreadyExistingAction = null)
     {
-        Guard.IsNotNullOrEmpty(fileName);
+        if (string.IsNullOrEmpty(fileName))
+        {
+            throw new ArgumentException("Value cannot be null or empty.", nameof(fileName));
+        }
             
         if (Part == null)
         {

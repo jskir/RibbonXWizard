@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO.Packaging;
-using CommunityToolkit.Diagnostics;
 
 namespace OfficeRibbonXEditor.Common;
 
@@ -40,8 +39,11 @@ public class OfficeDocument : IDisposable
 #pragma warning disable CS8618 // Non-nullable field is uninitialized. Consider declaring as nullable. Triggered due to UnderlyingPackage, but this is assigned in Init()
     public OfficeDocument(string fileName)
     {
-        Guard.IsNotNullOrEmpty(fileName);
-            
+        if (string.IsNullOrEmpty(fileName))
+        {
+            throw new ArgumentException("File name must not be null or empty.", nameof(fileName));
+        }
+        
         Name = fileName;
 
         do
